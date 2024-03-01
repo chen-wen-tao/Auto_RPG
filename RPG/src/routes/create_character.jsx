@@ -32,7 +32,7 @@ export default class Create_character extends Component{
         if (this.created === false){
             return (
             <>
-            <div class="center">
+            <div className="center">
                 <label>Name:</label><br/>
                 <input type="text" id="name" name="name"/><br/>
                 <p>Please select your class:</p>
@@ -73,13 +73,13 @@ export default class Create_character extends Component{
 
             return (
                 <>
-                    <div class="grid-container">
-                        <div class="health-bar-1">Health Bar</div>
-                        <div class="health-bar-2">Health Bar</div>
-                        <div class="character">{this.hero.show_stat()}</div>
-                        <div class="enemy">{this.tmp_enemy.show_stat()}</div>
-                        <div class="item"><input type="text" placeholder="Enter Item Name" id="item_name"/></div>
-                        <div class="bag"><button
+                    <div className="grid-container">
+                        <div className="health-bar-1">Health Bar</div>
+                        <div className="health-bar-2">Health Bar</div>
+                        <div className="character">{this.hero.show_stat()}</div>
+                        <div className="enemy">{this.tmp_enemy.show_stat()}</div>
+                        <div className="item"><input type="text" placeholder="Enter Item Name" id="item_name"/></div>
+                        <div className="bag"><button
                         onClick={() => {
                             let tmp;
                             if ((tmp = this.hero.inventory.find((element) => element.name == document.getElementById("item_name").value)) != null){
@@ -106,7 +106,7 @@ export default class Create_character extends Component{
                         
                         
                         >Change Gears</button></div>
-                        <div class="fight"><button 
+                        <div className="fight"><button 
                         onClick={() => {
                             this.hero.fight(this.tmp_enemy)
                             this.tmp_enemy = new Enemy(this.namelst.name_list[Math.floor(Math.random() * this.namelst.name_list.length)], 
