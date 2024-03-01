@@ -10,13 +10,13 @@ export default class LoginPage extends Component{
         return (
             <>
 
-                <div class="center">
+                <div className="center">
 
-                    <div class="container">
-                        <label for="uname"><b>Username</b></label>
+                    <div className="container">
+                        <label htmlFor="uname"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="uname" required/>
 
-                        <label for="psw"><b>Password</b></label>
+                        <label htmlFor="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="psw" required/>
 
                         <a href={`/create-character`}><button>Login</button></a>
@@ -25,9 +25,9 @@ export default class LoginPage extends Component{
                         </label>
                     </div>
 
-                    <div class="container">
-                        <button type="button" class="cancelbtn">Cancel</button>
-                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    <div className="container">
+                        <button type="button" className="cancelbtn">Cancel</button>
+                        <span className="psw">Forgot <a href="#">password?</a></span>
                     </div>
                 </div>
             </>
